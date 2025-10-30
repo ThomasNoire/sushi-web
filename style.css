@@ -1,0 +1,88 @@
+/* Базові та глобальні стилі */
+:root {
+  --primary: #ff4c60;
+  --secondary: #22181c;
+  --accent: #ffd166;
+  --bg: #f8f8fb;
+  --text: #22181c;
+  --radius: 12px;
+  --card-shadow: 0 4px 18px rgba(0,0,0,0.07);
+  --gradient: linear-gradient(90deg, #ff4c60 0%, #ff7272 100%);
+  font-size: 16px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); scroll-behavior: smooth; }
+
+.header { background: var(--primary); color: #fff; box-shadow: var(--card-shadow); position: sticky; top: 0; z-index: 10; }
+.navbar { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; }
+.logo { font-size: 2rem; font-weight: bold; letter-spacing: 1px; }
+.nav-links { display: flex; list-style: none; padding-left: 0; margin: 0; gap: 1.5rem; }
+.nav-links li a { text-decoration: none; color: #fff; transition: color .2s; padding: 6px 10px; border-radius: var(--radius); }
+.nav-links li a:hover { background: var(--accent); color: var(--secondary); }
+
+.hero-section { display: flex; align-items: center; min-height: 60vh; justify-content: center; background: var(--gradient); color: #fff; text-align: center; padding: 3rem 1rem 2rem; }
+.hero-content { max-width: 650px; margin: auto; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.hero-section h1 { font-size: 2.5em; margin: 0 0 1rem 0; }
+.hero-content p { margin: 0 0 0.9em 0; }
+.hero-caption { font-size: 0.95em; opacity: 0.95; margin-bottom: 1.1em; }
+.cta-btn { background: var(--accent); color: var(--secondary); padding: 0.8em 2em; font-size: 1.2em; border: none; border-radius: var(--radius); box-shadow: var(--card-shadow); cursor: pointer; margin-top: 1em; text-decoration: none; transition: background 0.3s; }
+.cta-btn:hover { background: #fff; color: var(--primary); }
+
+.gallery-section { padding: 3rem 1rem; background: #fff; }
+.gallery-section h2 { text-align: center; margin-bottom: 2rem; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+.gallery-grid img { width: 100%; aspect-ratio: 1/1; border-radius: var(--radius); box-shadow: var(--card-shadow); object-fit: cover; transition: transform 0.2s; cursor: pointer; }
+.gallery-grid img:hover { transform: scale(1.06); box-shadow: 0 8px 24px rgba(255, 76, 96, 0.10); }
+.gallery-compare { margin: 2.5rem auto 0; max-width: 440px; background: var(--bg); box-shadow: var(--card-shadow); border-radius: var(--radius); padding: 1.4rem; display: flex; flex-direction: column; align-items: center; gap: 0.7em; }
+.gallery-compare select { font-size: 1em; padding: 0.5em 1em; border-radius: var(--radius); border: 1px solid #eee; margin: 0 0.6em; }
+.gallery-compare h3 { margin-bottom: 0.5em; }
+.compare-result { margin-top: 1rem; color: var(--primary); min-height: 30px; font-weight: 500; }
+
+.articles-section { background: var(--accent); padding: 3rem 1rem; }
+.articles-section h2 { text-align: center; margin-bottom: 2rem; }
+.articles-list { display: flex; flex-direction: column; gap: 2rem; max-width: 800px; margin: 0 auto 2rem; }
+.article-card { background: #fff; border-radius: var(--radius); box-shadow: var(--card-shadow); padding: 1.2em 1.5em; }
+.article-card h3 { margin-top: 0; margin-bottom: 0.5em; }
+.article-card p { margin: 0 0 0.7em 0; }
+.article-form { max-width: 600px; margin: 2em auto 0; background: #fff; border-radius: var(--radius); box-shadow: var(--card-shadow); padding: 2em; }
+.article-form h3 { margin-top: 0; }
+#comment-form { display: grid; gap: 1em; }
+#comment-form input, #comment-form textarea, #comment-form select { border-radius: var(--radius); border: 1px solid #eee; padding: 0.7em; font-size: 1em; background: #fbfbfb; }
+#comment-form button { background: var(--primary); color: #fff; border: none; padding: 0.7em 0; border-radius: var(--radius); font-size: 1.1em; cursor: pointer; transition: background .2s; }
+#comment-form button:hover { background: #ff7272; }
+.comments-list { max-width: 600px; margin: 1.4em auto 0; }
+.comment-card { background: #fff; border-radius: var(--radius); box-shadow: var(--card-shadow); padding: 1em 1.4em; margin-bottom: 0.7em; }
+.comment-card .comment-meta { color: #666; font-size: 0.97em; margin-bottom: 0.35em; }
+.comment-card .rating { color: var(--primary); font-weight: bold; }
+
+.music-section { padding: 3rem 1rem; background: #fff; text-align: center; }
+.music-section h2 { margin-bottom: 1.3em; }
+audio { width: 100%; max-width: 420px; margin: 0 auto 1em; display: block; border-radius: var(--radius); }
+
+.video-section { background: var(--secondary); color: #fff; padding: 3rem 1rem; text-align: center; }
+.video-section h2 { margin-bottom: 1.2em; }
+.video-player { max-width: 620px; margin: 0 auto; border-radius: var(--radius); overflow: hidden; box-shadow: var(--card-shadow); }
+
+.presentation-section { background: #fff; padding: 3rem 1rem; text-align: center; }
+.presentation-section h2 { margin-bottom: 1.5rem; }
+.presentation-actions { margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 1.4em; }
+.presentation-actions button, .presentation-actions .btn { background: var(--primary); color: #fff; border: none; padding: 0.8em 1.2em; border-radius: var(--radius); font-size: 1em; cursor: pointer; box-shadow: var(--card-shadow); text-decoration: none; transition: background .2s; }
+.presentation-actions button:hover, .presentation-actions .btn:hover { background: var(--accent); color: var(--secondary); }
+.presentation-slides iframe { border-radius: var(--radius); box-shadow: var(--card-shadow); background: #000; }
+
+.footer { background: var(--primary); color: #fff; text-align: center; padding: 1.2em; margin-top: 2em; font-size: 1em; }
+
+/* Адаптивність */
+@media (max-width: 900px) {
+  .navbar { flex-direction: column; gap: 8px; padding: 1rem 0.6rem; }
+  .articles-list { gap: 1em; }
+}
+@media (max-width: 600px) {
+  .logo { font-size: 1.3rem; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 0.7em; }
+  .hero-section h1 { font-size: 1.45em; }
+  .presentation-slides iframe, .video-player iframe { height: 180px; }
+  .presentation-actions { flex-direction: column; gap: 0.7em; }
+  .navbar .nav-links { gap: 0.7em; font-size: 1em; }
+  .header, .footer { padding-left: 0.3em; padding-right: 0.3em; }
+}

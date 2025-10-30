@@ -1,21 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sushi-website</title>
+    <title>Суші-Бар | Замовлення суші онлайн</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Profile</a></li>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">SushiBar</div>
+            <ul class="nav-links">
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#articles">Статті</a></li>
+                <li><a href="#music">Музика</a></li>
+                <li><a href="#video">Відео</a></li>
+                <li><a href="#presentation">Презентація</a></li>
             </ul>
         </nav>
     </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Замов суші онлайн і насолодися справжнім смаком Японії!</h1>
+                <p>Свіжі роли, швидка доставка, сучасний сервіс. Обирай, замовляй, насолоджуйся!</p>
+                <p class="hero-caption">Щоденні знижки та безкоштовна доставка від 500 грн</p>
+                <a href="#gallery" class="cta-btn">Переглянути меню</a>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="gallery-section">
+            <h2>Галерея</h2>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Сет №1">
+                <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" alt="Сет №2">
+                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Сет №3">
+                <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Сет №4">
+            </div>
+            <div class="gallery-compare">
+                <h3>Порівняти сети</h3>
+                <select id="compare1">
+                    <option value="1">Сет №1</option>
+                    <option value="2">Сет №2</option>
+                    <option value="3">Сет №3</option>
+                    <option value="4">Сет №4</option>
+                </select>
+                <span>vs</span>
+                <select id="compare2">
+                    <option value="1">Сет №1</option>
+                    <option value="2">Сет №2</option>
+                    <option value="3">Сет №3</option>
+                    <option value="4">Сет №4</option>
+                </select>
+                <div class="compare-result" id="compare-result"></div>
+            </div>
+        </section>
+
+        <!-- Статті/Блог -->
+        <section id="articles" class="articles-section">
+            <h2>Статті про суші</h2>
+            <div class="articles-list" id="articles-list">
+                <!-- Статті додаються JS -->
+            </div>
+            <div class="article-form">
+                <h3>Додати коментар</h3>
+                <form id="comment-form">
+                    <input type="text" id="username" placeholder="Ваше ім'я" required>
+                    <textarea id="comment-text" rows="3" placeholder="Ваш коментар" required></textarea>
+                    <label for="rating">Оцінка:</label>
+                    <select id="rating" required>
+                        <option value="">Вибрати</option>
+                        <option value="5">5 ⭐</option>
+                        <option value="4">4 ⭐</option>
+                        <option value="3">3 ⭐</option>
+                        <option value="2">2 ⭐</option>
+                        <option value="1">1 ⭐</option>
+                    </select>
+                    <button type="submit">Додати</button>
+                </form>
+            </div>
+            <div class="comments-list" id="comments-list">
+                <!-- Коментарі додаються JS -->
+            </div>
+        </section>
+
+        <!-- Аудіо музика -->
+        <section id="music" class="music-section">
+            <h2>Музика для настрою</h2>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Ваш браузер не підтримує аудіо тег.
+            </audio>
+        </section>
+
+        <!-- Відео (YouTube) -->
+        <section id="video" class="video-section">
+            <h2>Відео: Як зробити замовлення суші онлайн</h2>
+            <div class="video-player">
+                <iframe width="100%" height="315" src="https://www.youtube.com/shorts/0xNU9yT_xco" title="Відео про замовлення суші" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Презентація -->
+        <section id="presentation" class="presentation-section">
+            <h2>Переглянути презентацію</h2>
+            <div class="presentation-actions">
+                <button onclick="window.open('https://docs.google.com/presentation/d/1Dq4uati9qQ8dM6n_l1fJ0IMHwciH3grJefqBK9N44pQ/present', '_blank')">Відкрити онлайн</button>
+                <a href="https://filesamples.com/samples/document/pdf/sample2.pdf" target="_blank" class="btn">Завантажити PDF</a>
+            </div>
+            <div class="presentation-slides">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTQiI6Ctuhd2zHEooW4MyA4d60nFVP_QtumuD7u3whX2KhUNIMNMWoYvUG1t3w0KDOsMALxS4a87s4y/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="350" allowfullscreen="true"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Підготовка місця для скрипта Engatti (чат-бот) -->
+    <div id="chatbot-placeholder"></div>
+    <!-- <script>// Сюди вставити Engatti Script у майбутньому</script> -->
+
+    <footer class="footer">
+        <p>&copy; 2025 SushiBar. Всі права захищено.</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
