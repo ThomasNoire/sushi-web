@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const sets = [
     { id: 1, name: 'Сет №1', desc: 'Традиційний набір ролів із лососем, авокадо, сиром.', img: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=400&q=80' },
     { id: 2, name: 'Сет №2', desc: 'Асорті з тунцем, огірком, та унагі.', img: 'https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=400&q=80' },
-    { id: 3, name: 'Сет №3', desc: 'Гострі роли та футомаки з креветкою.', img: 'https://images.unsplash.com/photo-1579871494447-9811f80d6caf?auto=format&fit=crop&w=400&q=80' },
+    { id: 3, name: 'Сет №3', desc: 'Гострі роли та футомаки з креветкою.', img: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80' },
     { id: 4, name: 'Сет №4', desc: 'Вегетаріанський сет з авокадо, манго, огірком.', img: 'https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=400&q=80' }
   ];
   function updateComparison() {
@@ -13,7 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if (c1 && c2 && c1 !== c2) {
       const set1 = sets.find(s => s.id == c1);
       const set2 = sets.find(s => s.id == c2);
-      html = `<strong>${set1.name}</strong>: ${set1.desc}<br><img src="${set1.img}" width="120"> <b>vs</b> <img src="${set2.img}" width="120"> <strong>${set2.name}</strong>: ${set2.desc}`;
+      html = `
+        <div class="compare-item">
+          <div class="compare-set">
+            <h4>${set1.name}</h4>
+            <p>${set1.desc}</p>
+            <img src="${set1.img}" alt="${set1.name}">
+          </div>
+          <div class="compare-vs">VS</div>
+          <div class="compare-set">
+            <h4>${set2.name}</h4>
+            <p>${set2.desc}</p>
+            <img src="${set2.img}" alt="${set2.name}">
+          </div>
+        </div>
+      `;
     } else if (c1 === c2) {
       html = 'Виберіть різні сети для порівняння.';
     }
