@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const sets = [
     { id: 1, name: 'Сет №1', desc: 'Традиційний набір ролів із лососем, авокадо, сиром.', img: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=400&q=80' },
     { id: 2, name: 'Сет №2', desc: 'Асорті з тунцем, огірком, та унагі.', img: 'https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=400&q=80' },
-    { id: 3, name: 'Сет №3', desc: 'Гострі роли та футомаки з креветкою.', img: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80' },
+    { id: 3, name: 'Сет №3', desc: 'Гострі роли та футомаки з креветкою.', img: 'https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=400&q=80' },
     { id: 4, name: 'Сет №4', desc: 'Вегетаріанський сет з авокадо, манго, огірком.', img: 'https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=400&q=80' }
   ];
   function updateComparison() {
