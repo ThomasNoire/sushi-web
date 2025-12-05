@@ -1,4 +1,4 @@
-// Галерея/порівняння суші сетів
+
 document.addEventListener('DOMContentLoaded', () => {
   const sets = [
     { id: 1, name: 'Сет №1', desc: 'Традиційний набір ролів із лососем, авокадо, сиром.', img: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=400&q=80' },
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('compare2').addEventListener('change', updateComparison);
   updateComparison();
 
-  // Статті
+
   const articles = [
     { id: 1, title: 'Як обирати суші: поради від шеф-майстра', body: 'Секрет найсмачніших ролів ховається у свіжості інгредієнтів...', comments: [] },
     { id: 2, title: 'Тренди японської кухні у 2025', body: 'Популярність класичних і нових ролів не спадає...', comments: [] }
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     div.innerHTML = `<h3>${article.title}</h3><p>${article.body}</p>`;
     articlesList.appendChild(div);
   });
-  // Коментарі
+
   const commentsKey = 'sushi-comments';
   function getSavedComments() {
     const c = localStorage.getItem(commentsKey);
